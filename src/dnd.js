@@ -30,14 +30,17 @@ const homeworkContainer = document.querySelector('#homework-container');
  */
 function createDiv() {
     let draggableDiv = document.createElement('div');
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
 
     draggableDiv.classList.add('draggable-div');
-    draggableDiv.style.background = 'red';
-    draggableDiv.style.width = '400px';
-    draggableDiv.style.height = '400px';
+    draggableDiv.style.background = "rgb(" + x + "," + y + "," + z + ")";
+    draggableDiv.style.width = Math.floor(Math.random() * 100) + 'px';
+    draggableDiv.style.height = Math.floor(Math.random() * 100) + 'px';
     draggableDiv.style.position = 'absolute';
-    draggableDiv.style.left = '40px';
-    draggableDiv.style.top = '40px';
+    draggableDiv.style.left = Math.floor(Math.random() * 100) + 'px';
+    draggableDiv.style.top = Math.floor(Math.random() * 100) + 'px';
 
     return draggableDiv;
 }
